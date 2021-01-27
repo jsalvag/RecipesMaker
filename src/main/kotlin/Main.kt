@@ -1,4 +1,7 @@
 fun main() {
+    val app = App()
+    app.run()
+/*
     val elements = listOf("Agua", "Leche", "Carne", "Verduras", "Frutas", "Cereal", "Huevos", "Aceite")
     val recipes = mutableListOf<String>()
     do {
@@ -28,6 +31,7 @@ fun main() {
             else -> println("Opción inválida")
         }
     } while (true)
+*/
 }
 
 private fun viewRecipe(recipes: MutableList<String>) {
@@ -65,9 +69,9 @@ private fun makeRecipe(
                 print(
                     """
                                     
-                                    Seleccionó $amount de $selected
-                                    Si es correcto presione enter para continuar 
-                                    """.trimIndent()
+                    Seleccionó $amount de $selected
+                    Si es correcto presione enter para continuar 
+                    """.trimIndent()
                 )
                 if (readLine().isNullOrBlank()) {
                     list.add("$selected: $amount")
